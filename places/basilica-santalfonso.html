@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Basilica di Sant'Alfonso Maria de' Liguori — Pagani</title>
+  <meta name="description" content="Basilica di Sant'Alfonso a Pagani, luogo di pellegrinaggio con museo alfonsiano.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+ </head>
+<body>
+  <div class="place-header">
+    <div class="container">
+      <a href="../index.html" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <h1>Basilica di Sant'Alfonso</h1>
+      <div class="breadcrumb">
+        <a href="../index.html" class="place-breadcrumb-link">Home</a>
+        <span>»</span>
+        <a href="../index.html#places" class="place-breadcrumb-link">Luoghi</a>
+        <span>»</span>
+        <span>Basilica</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content" style="padding:2rem 1rem;">
+    <img src="../src/assets/Basilica di Sant'Alfonso Maria de' Liguori.jpg" alt="Basilica Sant'Alfonso" style="width:100%;max-height:480px;object-fit:cover;border-radius:.75rem;margin:2rem 0;box-shadow:var(--shadow-warm);">
+    <div class="place-info">
+      <div class="info-item"><strong>📍 Comune</strong> Pagani</div>
+      <div class="info-item"><strong>🏛️ Tipologia</strong> Basilica Pontificia</div>
+      <div class="info-item"><strong>⭐ Santo</strong> S. Alfonso M. de' Liguori</div>
+      <div class="info-item"><strong>📞 Indirizzo</strong> Piazza Sant'Alfonso</div>
+    </div>
+    <section class="place-section">
+      <h2>Descrizione Storica</h2>
+      <p>Cuore della spiritualità alfonsiana, la basilica custodisce le spoglie di Sant'Alfonso Maria de' Liguori, Dottore della Chiesa e fondatore dei Redentoristi.</p>
+      <p>Il complesso include il museo con le reliquie e la preziosa pinacoteca che racconta la vita e le opere del Santo.</p>
+    </section>
+    <section class="place-section">
+      <h2>📸 Galleria</h2>
+      <div class="place-gallery">
+        <img src="../src/assets/Basilica di Sant'Alfonso Maria de' Liguori.jpg" alt="Facciata" title="La facciata della Basilica">
+        <img src="../src/assets/Santuario di Santa Maria dei Bagni.jpg" alt="Santuario Bagni" title="Santuario Santa Maria dei Bagni">
+        <img src="../src/assets/Concattedrale di San Michele Arcangelo.jpg" alt="San Michele" title="Concattedrale San Michele">
+      </div>
+    </section>
+    <section class="place-map-container">
+      <div id="place-map"></div>
+    </section>
+    <section class="place-section">
+      <h2>ℹ️ Info Pratiche</h2>
+      <p><strong>Pellegrinaggi:</strong> Accoglie pellegrini da tutto il mondo.</p>
+      <p><strong>Museo:</strong> Orari variabili, consigliato contattare in anticipo.</p>
+    </section>
+    <div class="place-related">
+      <h3>🔗 Siti Correlati</h3>
+      <div class="place-related-grid">
+        <a href="museo-archeologico-provinciale.html" class="related-link">Museo Provinciale</a>
+        <a href="battistero-santa-maria-maggiore.html" class="related-link">Battistero</a>
+        <a href="cattedrale-san-prisco.html" class="related-link">Cattedrale San Prisco</a>
+      </div>
+    </div>
+  </main>
+  <footer style="padding:2rem;text-align:center;color:var(--muted-foreground);">© 2026 Tredizione</footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.7235, lng = 14.5760; // approssimazione Pagani
+    const map = L.map('place-map').setView([lat, lng], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup("Basilica di Sant'Alfonso").openPopup();
+  </script>
+</body>
+</html>

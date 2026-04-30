@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Museo Archeologico Provinciale dell'Agro Nocerino — Nocera Inferiore</title>
+  <meta name="description" content="Museo Archeologico Provinciale dell'Agro Nocerino nel Convento di Sant'Antonio, Nocera Inferiore.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+ </head>
+<body>
+  <div class="place-header">
+    <div class="container">
+      <a href="../index.html" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <h1>Museo Archeologico Provinciale</h1>
+      <div class="breadcrumb">
+        <a href="../index.html" class="place-breadcrumb-link">Home</a>
+        <span class="place-breadcrumb-link">»</span>
+        <a href="../index.html#places" class="place-breadcrumb-link">Luoghi</a>
+        <span class="place-breadcrumb-link">»</span>
+        <span>Museo</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content" style="padding:2rem 1rem;">
+    <img src="../src/assets/Museo Archeologico Provinciale dell'Agro Nocerino.jpg" alt="Museo Archeologico Provinciale" style="width:100%;max-height:480px;object-fit:cover;border-radius:.75rem;margin:2rem 0;box-shadow:var(--shadow-warm);">
+
+    <div class="place-info">
+      <div class="info-item"><strong>📍 Comune</strong> Nocera Inferiore</div>
+      <div class="info-item"><strong>🏛️ Tipologia</strong> Museo Archeologico</div>
+      <div class="info-item"><strong>🏢 Sede</strong> Convento di Sant'Antonio</div>
+      <div class="info-item"><strong>📞 Indirizzo</strong> Piazza S. Antonio, 14</div>
+    </div>
+
+    <section class="place-section">
+      <h2>Descrizione Storica</h2>
+      <p>Ospitato nel trecentesco Convento di Sant'Antonio, il museo conserva una straordinaria collezione di reperti archeologici dalla civiltà locale.</p>
+      <p>Tra i pezzi più importanti: statue di divinità, sarcofagi decorati del III-IV secolo, e manufatti dell'antica Nuceria Alfaterna.</p>
+    </section>
+
+    <section class="place-section">
+      <h2>📸 Galleria</h2>
+      <div class="place-gallery">
+        <img src="../src/assets/Museo Archeologico Provinciale dell'Agro Nocerino.jpg" alt="Reperti antichi" title="Collezione di reperti">
+        <img src="../src/assets/Museo Archeologico Provinciale dell'Agro Nocerino.jpg" alt="Sarcofagi" title="Sarcofagi decorati">
+        <img src="../src/assets/Museo Archeologico Provinciale dell'Agro Nocerino.jpg" alt="Affreschi" title="Decorazioni">
+        <img src="../src/assets/Museo Archeologico Provinciale dell'Agro Nocerino.jpg" alt="Sculture" title="Sculture antiche">
+      </div>
+    </section>
+
+    <section class="place-map-container">
+      <div id="place-map"></div>
+    </section>
+
+    <section class="place-section">
+      <h2>ℹ️ Info Pratiche</h2>
+      <p><strong>Orari:</strong> Verificare contattando il museo direttamente.</p>
+      <p><strong>Come arrivare:</strong> Facilmente raggiungibile dal centro di Nocera Inferiore.</p>
+      <p><strong>Consigli:</strong> Una visita vale 1-2 ore. Consigliato prenotare per gruppi.</p>
+    </section>
+
+    <div class="place-related">
+      <h3>🔗 Siti Correlati</h3>
+      <div class="place-related-grid">
+        <a href="battistero-santa-maria-maggiore.html" class="related-link">Battistero</a>
+        <a href="cattedrale-san-prisco.html" class="related-link">Cattedrale</a>
+        <a href="piazza-del-corso.html" class="related-link">Piazza Corso</a>
+      </div>
+    </div>
+  </main>
+
+  <footer style="padding:2rem;text-align:center;color:var(--muted-foreground);">© 2026 Tredizione</footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.7475, lng = 14.6180; // approssimazione Nocera Inferiore
+    const map = L.map('place-map').setView([lat, lng], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('Museo Archeologico Provinciale').openPopup();
+  </script>
+</body>
+</html>

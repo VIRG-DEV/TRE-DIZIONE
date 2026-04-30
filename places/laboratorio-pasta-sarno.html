@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Laboratorio Pasta Fresca - Sarno</title>
+  <meta name="description" content="Laboratorio artigianale di pasta fresca, corsi di cucina, degustazioni e shop di specialità locali.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <!-- Hero Header -->
+  <div class="place-header-premium" data-parallax="0.5" style="background: linear-gradient(135deg, #E53935 0%, #FF7043 100%); position: relative; overflow: hidden;">
+    <div class="parallax-bg"></div>
+    <div class="container place-header-content">
+      <a href="../index.html#places" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <div class="header-main">
+        <div class="header-badge" style="background: rgba(255,255,255,0.2); border-left: 4px solid #E53935;">🍝 ARTIGIANATO ALIMENTARE</div>
+        <h1>Laboratorio Pasta Fresca Sarno</h1>
+        <p class="header-subtitle">Tradizione culinaria fatta a mano</p>
+      </div>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>»</span>
+        <a href="../index.html#places">Luoghi</a> <span>»</span>
+        <span>Laboratorio Pasta</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content-premium">
+    <!-- Quick Info Bar -->
+    <div class="quick-info-bar">
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <div><strong>Comune</strong> <br> Sarno</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="M21 21l-4.35-4.35"></path>
+        </svg>
+        <div><strong>Specialità</strong> <br> Pasta Fresca</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6v6l4 2"></polyline>
+        </svg>
+        <div><strong>Orario</strong> <br> 10:00 - 19:00</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 20v-6m-3-3h.01M9 11v5m6 4v-6m0-3h.01M15 11v5M6 20h12a2 2 0 002-2V8a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+        <div><strong>Workshop</strong> <br> Prenotazione Obbligatoria</div>
+      </div>
+    </div>
+
+    <!-- Main Sections -->
+    <section class="place-section-premium" style="animation-delay: 0.2s;">
+      <div class="section-header-premium">
+        <h2>🍝 L'Arte della Pasta</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-content">
+        <p style="font-size: 1.05rem; line-height: 1.8;">Nel Laboratorio Pasta Fresca Sarno perpetuiamo l'antica tradizione della pasta fatta a mano. Con farine selezionate a km zero e ricette tramandate da generazioni, creiamo tagliatelle, fettuccine, orecchiette e ravioli riempiti di ingredienti autentici. Ogni pezzo è plasmato dalle mani esperte dei nostri mastri pastai.</p>
+        <div class="highlight-box" style="margin-top: 2rem; background: linear-gradient(135deg, #FFCCBC 0%, #FFAB91 100%); border-left: 4px solid #E53935; padding: 1.5rem; border-radius: 0.75rem;">
+          <strong style="color: #E53935;">✋ 100% Made by Hand:</strong> Zero macchinari industriali, solo abilità manuale, farina durum di qualità e acqua fresca. Pronta per la tavola in poche ore.
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="place-section-premium" style="animation-delay: 0.4s;">
+      <div class="section-header-premium">
+        <h2>🖼️ Dal Grano alla Tavola</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid-premium">
+        <div class="gallery-item" style="animation-delay: 0.1s;">
+          <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80&w=1200" alt="Impasto" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Preparazione Impasto</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.2s;">
+          <img src="https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&q=80&w=1200" alt="Lavorazione" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Lavorazione Manuale</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.3s;">
+          <img src="https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&q=80&w=1200" alt="Pasta Pronta" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Varietà di Pasta</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.4s;">
+          <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=1200" alt="Workshop" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Corsi di Cucina</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="place-section-premium" style="animation-delay: 0.6s;">
+      <div class="section-header-premium">
+        <h2>⭐ Esperienze Culinarie</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">👨‍🍳</div>
+          <h3>Workshop Pasta</h3>
+          <p>Impara a fare la pasta come i maestri</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🍽️</div>
+          <h3>Assaggio Guidato</h3>
+          <p>Degusta varianti con salse locali</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛍️</div>
+          <h3>Shop Specialità</h3>
+          <p>Acquista pasta fresca da portare a casa</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👪</div>
+          <h3>Famiglie Benvenute</h3>
+          <p>Laboratori per bambini e adulti</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="place-section-premium" style="animation-delay: 0.8s;">
+      <div class="section-header-premium">
+        <h2>📍 Trovaci</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="map-premium-container">
+        <div id="place-map"></div>
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section class="place-section-premium" style="animation-delay: 1s;">
+      <div class="section-header-premium">
+        <h2>ℹ️ Dettagli Pratici</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="info-grid-premium">
+        <div class="info-card-premium">
+          <h4>📞 Prenotazioni</h4>
+          <p>+39 081 764 5432<br>info@laboratoriopasta.it</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🕐 Orari</h4>
+          <p>Lun-Sab: 10-13, 16-19<br>Domenica: 10-13</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>💰 Workshop</h4>
+          <p>€30 corso base<br>€50 avanzato</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>📦 Consegna</h4>
+          <p>Frolla 48h max<br>Spedizione a richiesta</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related -->
+    <section class="place-section-premium related-section" style="animation-delay: 1.2s;">
+      <div class="section-header-premium">
+        <h2>🔗 Altre Specialità Gastronomiche</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="related-places-grid">
+        <a href="azienda-viticola-fiano.html" class="related-card">
+          <div class="related-icon">🍷</div>
+          <h3>Fiano di Avellino</h3>
+          <p>Vini DOCG</p>
+        </a>
+        <a href="caseificio-taurasi.html" class="related-card">
+          <div class="related-icon">🧀</div>
+          <h3>Caseificio</h3>
+          <p>Formaggi DOP</p>
+        </a>
+        <a href="frantoio-olio-pagani.html" class="related-card">
+          <div class="related-icon">🫒</div>
+          <h3>Frantoio Pagani</h3>
+          <p>Olio biologico</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 2rem; text-align: center; color: var(--muted-foreground); background: var(--card); margin-top: 4rem; border-top: 1px solid var(--border);">
+    <p>© 2026 Tredizione | Segreti Culinari, Tradizione, Passione</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.8100, lng = 14.6200;
+    const map = L.map('place-map').setView([lat, lng], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('<b>Laboratorio Pasta Fresca</b><br>🍝 Pasta Fresca Artigianale').openPopup();
+  </script>
+</body>
+</html>

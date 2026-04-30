@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bosco del Ninfeo - Foresta Millenia</title>
+  <meta name="description" content="Foresta millenaria con alberi antichi, grotte, sorgenti naturali e sentieri immersi nella natura primordiale.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <!-- Hero Header -->
+  <div class="place-header-premium" data-parallax="0.5" style="background: linear-gradient(135deg, #1B5E20 0%, #389E3D 100%); position: relative; overflow: hidden;">
+    <div class="parallax-bg"></div>
+    <div class="container place-header-content">
+      <a href="../index.html#places" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <div class="header-main">
+        <div class="header-badge" style="background: rgba(255,255,255,0.2); border-left: 4px solid #1B5E20;">🌲 FORESTA PRIMORDIALE</div>
+        <h1>Bosco del Ninfeo</h1>
+        <p class="header-subtitle">Alberi millenari e misteri naturali</p>
+      </div>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>»</span>
+        <a href="../index.html#places">Luoghi</a> <span>»</span>
+        <span>Bosco del Ninfeo</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content-premium">
+    <!-- Quick Info Bar -->
+    <div class="quick-info-bar">
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <div><strong>Comune</strong> <br> Nocera Inferiore</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="9" r="7"></circle>
+          <line x1="18" y1="2" x2="22" y2="6"></line>
+        </svg>
+        <div><strong>Eta Alberi</strong> <br> 600-1000 anni</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6v6l4 2"></polyline>
+        </svg>
+        <div><strong>Visitabile</strong> <br> Tutto l'anno</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 0v24M21 0v24M1 7h22M1 12h22M1 16h22"></path>
+        </svg>
+        <div><strong>Segnalazione</strong> <br> Sentieri CAI</div>
+      </div>
+    </div>
+
+    <!-- Main Sections -->
+    <section class="place-section-premium" style="animation-delay: 0.2s;">
+      <div class="section-header-premium">
+        <h2>🌳 Testimone dei Secoli</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-content">
+        <p style="font-size: 1.05rem; line-height: 1.8;">Il Bosco del Ninfeo è una foresta primordiale dove alberi millenari raccontano storie antiche e sorgenti naturali nascono da profondità ignote. Questo ecosistema incontaminato custodisce grotte misteriose, cascate nascoste e una biodiversità straordinaria. Camminare qui è come tornare indietro nel tempo, circondarsi dalla bellezza selvaggia della natura più autentica.</p>
+        <div class="highlight-box" style="margin-top: 2rem; background: linear-gradient(135deg, #81C784 0%, #66BB6A 100%); border-left: 4px solid #1B5E20; padding: 1.5rem; border-radius: 0.75rem;">
+          <strong style="color: #1B5E20;">🌿 Patrimonio Naturale:</strong> Foresta macchia-mediterranea protetta, faggi antichi, castagni plurisecolari, flora endemia campana. Sorgenti perenni di acqua fresca.
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="place-section-premium" style="animation-delay: 0.4s;">
+      <div class="section-header-premium">
+        <h2>🖼️ Bellezza Selvaggia</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid-premium">
+        <div class="gallery-item" style="animation-delay: 0.1s;">
+          <img src="../src/assets/Bosco del Ninfeo & Laghi.jpg" alt="Alberi Antichi" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Flora Millenaria</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.2s;">
+          <img src="../src/assets/Oasi Naturale del Fiume Sarno.jpg" alt="Grotte" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Sentieri Incantati</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.3s;">
+          <img src="../src/assets/Sarno.jpg" alt="Sorgenti" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Sorgenti d'Acqua</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.4s;">
+          <img src="../src/assets/landscape-1.jpg" alt="Sottobosco" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Paesaggi Naturali</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="place-section-premium" style="animation-delay: 0.6s;">
+      <div class="section-header-premium">
+        <h2>✨ Esperienze Mistiche</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🌲</div>
+          <h3>Tour Botanico</h3>
+          <p>Scopri specie di alberi rari e antichi</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⛺</div>
+          <h3>Immersione Natura</h3>
+          <p>Cammina in silenzio tra i giganti verdi</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💧</div>
+          <h3>Sorgenti Sacre</h3>
+          <p>Raccogliti presso le fonti primordiali</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📸</div>
+          <h3>Fotografa la Magia</h3>
+          <p>Cattura la luce tra i rami antichi</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="place-section-premium" style="animation-delay: 0.8s;">
+      <div class="section-header-premium">
+        <h2>📍 Dove Troviamo</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="map-premium-container">
+        <div id="place-map"></div>
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section class="place-section-premium" style="animation-delay: 1s;">
+      <div class="section-header-premium">
+        <h2>ℹ️ Pianifica la Visita</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="info-grid-premium">
+        <div class="info-card-premium">
+          <h4>📞 Guida Forestale</h4>
+          <p>+39 081 656 7890<br>visite.bosco@comune.ni.it</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🚶 Difficoltà</h4>
+          <p>Medio<br>Scarpe trekking consigliato</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>📆 Miglior Periodo</h4>
+          <p>Aprile-Novembre<br>Evitare inverno piovoso</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>💰 Costo</h4>
+          <p>Gratuito<br>Donazione aiuta conservazione</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related -->
+    <section class="place-section-premium related-section" style="animation-delay: 1.2s;">
+      <div class="section-header-premium">
+        <h2>🔗 Avventure Naturali Correlate</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="related-places-grid">
+        <a href="parco-monti-picentini.html" class="related-card">
+          <div class="related-icon">⛰️</div>
+          <h3>Monti Picentini</h3>
+          <p>Trekking montano</p>
+        </a>
+        <a href="oasi-fiume-sarno.html" class="related-card">
+          <div class="related-icon">🦆</div>
+          <h3>Oasi Fiume Sarno</h3>
+          <p>Riserva protetta</p>
+        </a>
+        <a href="valle-sarno-river.html" class="related-card">
+          <div class="related-icon">🌊</div>
+          <h3>Valle del Sarno</h3>
+          <p>Sentieri fluviali</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 2rem; text-align: center; color: var(--muted-foreground); background: var(--card); margin-top: 4rem; border-top: 1px solid var(--border);">
+    <p>© 2026 Tredizione | Natura Primordiale, Silenzio, Contemplazione</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.7520, lng = 14.6100;
+    const map = L.map('place-map').setView([lat, lng], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('<b>Bosco del Ninfeo</b><br>🌲 Foresta Millenaria').openPopup();
+  </script>
+</body>
+</html>

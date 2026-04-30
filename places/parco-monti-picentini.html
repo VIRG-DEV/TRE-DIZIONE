@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Parco Monti Picentini</title>
+  <meta name="description" content="Catena montuosa con cascate spettacolari, grotte antiche e sentieri escursionistici avanzati.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <!-- Hero Header with Parallax -->
+  <div class="place-header-premium" data-parallax="0.5" style="background: linear-gradient(135deg, #1565C0 0%, #42A5F5 100%); position: relative; overflow: hidden;">
+    <div class="parallax-bg"></div>
+    <div class="container place-header-content">
+      <a href="../index.html#places" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <div class="header-main">
+        <div class="header-badge" style="background: rgba(255,255,255,0.2); border-left: 4px solid #1565C0;">⛰️ TREKKING</div>
+        <h1>Parco Monti Picentini</h1>
+        <p class="header-subtitle">Cascate, grotte e sentieri mozzafiato</p>
+      </div>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>»</span>
+        <a href="../index.html#places">Luoghi</a> <span>»</span>
+        <span>Monti Picentini</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content-premium">
+    <!-- Quick Info Bar -->
+    <div class="quick-info-bar">
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <div><strong>Comune</strong> <br> Mercato S. Severino</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="2" x2="12" y2="22"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+        <div><strong>Altitudine</strong> <br> 1790 m</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6v6l4 2"></polyline>
+        </svg>
+        <div><strong>Difficoltà</strong> <br> Media-Alta</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 11l3 3L22 4"></path>
+          <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <div><strong>Durata Trekking</strong> <br> 4-6 ore</div>
+      </div>
+    </div>
+
+    <!-- Main Sections with Animations -->
+    <section class="place-section-premium" style="animation-delay: 0.2s;">
+      <div class="section-header-premium">
+        <h2>⛰️ Il Massiccio dei Picentini</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-content">
+        <p style="font-size: 1.05rem; line-height: 1.8;">I Monti Picentini rappresentano una delle catene più affascinanti della Campania. Con vette che superano i 1700 metri, il parco offre spettacolari cascate, grotte millennie e una vegetazione alpina unica nel sud Italia. Ideale per trekking avanzato e escursioni indimenticabili.</p>
+        <div class="highlight-box" style="margin-top: 2rem; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); border-left: 4px solid #1565C0; padding: 1.5rem; border-radius: 0.75rem;">
+          <strong style="color: #1565C0;">🏔️ Vetta Principale:</strong> Monte Accellica a 1794m, dal quale si domina tutta la valle del Sarno e il golfo di Salerno.
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Premium -->
+    <section class="place-section-premium" style="animation-delay: 0.4s;">
+      <div class="section-header-premium">
+        <h2>📸 Panorami Spettacolari</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid-premium">
+        <div class="gallery-item" style="animation-delay: 0.1s;">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1200" alt="Vette" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Vette dei Picentini</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.2s;">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=1200" alt="Cascate" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Cascate Nascoste</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.3s;">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1200" alt="Sentieri" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Sentieri CAI</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.4s;">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1200" alt="Panorama" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Vista Mozzafiato</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="place-section-premium" style="animation-delay: 0.6s;">
+      <div class="section-header-premium">
+        <h2>🥾 Avventure Outdoor</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⛰️</div>
+          <h3>Trekking Avanzato</h3>
+          <p>Percorsi CAI certificati con difficoltà EE</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💧</div>
+          <h3>Canyoning</h3>
+          <p>Discesa torrenti e cascate guidata</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🪨</div>
+          <h3>Speleologia</h3>
+          <p>Esplorazioni di grotte sotterranee</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧗</div>
+          <h3>Arrampicata Sportiva</h3>
+          <p>Vie ferrate e pareti rocciose</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="place-section-premium" style="animation-delay: 0.8s;">
+      <div class="section-header-premium">
+        <h2>📍 Accesso al Parco</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="map-premium-container">
+        <div id="place-map"></div>
+      </div>
+    </section>
+
+    <!-- Practical Info -->
+    <section class="place-section-premium" style="animation-delay: 1s;">
+      <div class="section-header-premium">
+        <h2>ℹ️ Prepara la Tua Escursione</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="info-grid-premium">
+        <div class="info-card-premium">
+          <h4>🏕️ Rifuggi</h4>
+          <p>Rifugio Piano Laceno<br>Rifugio Feudo Morone</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>📞 Guide Ufficiali</h4>
+          <p>+39 089 241 0101<br>www.parcopicentini.it</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🎒 Equipaggiamento</h4>
+          <p>Scarpe trekking, acqua<br>Mappa CAI consigliata</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🗓️ Miglior Periodo</h4>
+          <p>Maggio-Settembre<br>Evitare giorni piovosi</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Places -->
+    <section class="place-section-premium related-section" style="animation-delay: 1.2s;">
+      <div class="section-header-premium">
+        <h2>🔗 Altre Destinazioni Nature</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="related-places-grid">
+        <a href="castello-parco-fienga.html" class="related-card">
+          <div class="related-icon">🏰</div>
+          <h3>Castello del Parco</h3>
+          <p>Fortezza medievale</p>
+        </a>
+        <a href="valle-sarno-river.html" class="related-card">
+          <div class="related-icon">🌿</div>
+          <h3>Valle del Sarno</h3>
+          <p>Fiume e Natura</p>
+        </a>
+        <a href="oasi-fiume-sarno.html" class="related-card">
+          <div class="related-icon">🦆</div>
+          <h3>Oasi Fiume Sarno</h3>
+          <p>Riserva protetta</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 2rem; text-align: center; color: var(--muted-foreground); background: var(--card); margin-top: 4rem; border-top: 1px solid var(--border);">
+    <p>© 2026 Tredizione | Escursioni memorabili in montagna</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.7100, lng = 14.7000;
+    const map = L.map('place-map').setView([lat, lng], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('<b>Parco Monti Picentini</b><br>⛰️ Trekking Avanzato').openPopup();
+  </script>
+</body>
+</html>

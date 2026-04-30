@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Caseificio Artigianale Taurasi - Formaggi DOP</title>
+  <meta name="description" content="Caseificio storico con produzione manuale di paste filate, bufale, mozzarelle artigianali e formaggi DOP della Campania.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <!-- Hero Header -->
+  <div class="place-header-premium" data-parallax="0.5" style="background: linear-gradient(135deg, #D2691E 0%, #FF8C00 100%); position: relative; overflow: hidden;">
+    <div class="parallax-bg"></div>
+    <div class="container place-header-content">
+      <a href="../index.html#places" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <div class="header-main">
+        <div class="header-badge" style="background: rgba(255,255,255,0.2); border-left: 4px solid #D2691E;">🧀 CASEIFICIO</div>
+        <h1>Caseificio Artigianale Taurasi</h1>
+        <p class="header-subtitle">Tradizione casearia di oltre 60 anni</p>
+      </div>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>»</span>
+        <a href="../index.html#places">Luoghi</a> <span>»</span>
+        <span>Caseificio Taurasi</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content-premium">
+    <!-- Quick Info Bar -->
+    <div class="quick-info-bar">
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <div><strong>Comune</strong> <br> Taurasi</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 6v12M6 12h12"></path>
+          <circle cx="12" cy="12" r="10"></circle>
+        </svg>
+        <div><strong>Produzione</strong> <br> Paste Filate</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6v6l4 2"></polyline>
+        </svg>
+        <div><strong>Orario</strong> <br> 8:00 - 17:00</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L15.09 8.26H22L17.55 12.5L18.64 18.74L12 14.5L5.36 18.74L6.45 12.5L2 8.26H8.91L12 2Z"></path>
+        </svg>
+        <div><strong>Certificazione</strong> <br> DOP Certificato</div>
+      </div>
+    </div>
+
+    <!-- Main Sections -->
+    <section class="place-section-premium" style="animation-delay: 0.2s;">
+      <div class="section-header-premium">
+        <h2>🧀 Arte Casearia Tradizionale</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-content">
+        <p style="font-size: 1.05rem; line-height: 1.8;">Fondato nel 1962, il Caseificio Artigianale Taurasi perpetua l'antica tradizione della produzione casearia campana. Con metodi completamente manuali e latte appena munto da allevamenti selezionati, creiamo formaggi di qualità eccezionale: mozzarelle, scamorze, provole e latticini freschi certificati DOP.</p>
+        <div class="highlight-box" style="margin-top: 2rem; background: linear-gradient(135deg, #FFE8D6 0%, #FFD4A3 100%); border-left: 4px solid #D2691E; padding: 1.5rem; border-radius: 0.75rem;">
+          <strong style="color: #D2691E;">🎖️ Qualità Certificata:</strong> Formaggi DOP, senza conservanti artificiali, solo latte di bufale e vaccini selezionati da allevamenti a km zero.
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="place-section-premium" style="animation-delay: 0.4s;">
+      <div class="section-header-premium">
+        <h2>🖼️ Processo Artigianale</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid-premium">
+        <div class="gallery-item" style="animation-delay: 0.1s;">
+          <img src="../src/assets/Caseificio Artigianale Taurasi.jpeg" alt="Latte Fresco" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Materia Prima</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.2s;">
+          <img src="../src/assets/Fattoria_locale.png" alt="Lavorazione" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Lavorazione Artigianale</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.3s;">
+          <img src="../src/assets/agriculture-1.jpg" alt="Forme" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Stagionatura</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.4s;">
+          <img src="../src/assets/Frantoio Oleario Pagani Bio.webp" alt="Prodotti" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Le Nostre Specialità</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="place-section-premium" style="animation-delay: 0.6s;">
+      <div class="section-header-premium">
+        <h2>🔧 Specialità Casearie</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🥛</div>
+          <h3>Mozzarelle Filate</h3>
+          <p>Fresche ogni mattina da latte di bufala</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧀</div>
+          <h3>Scamorze e Provole</h3>
+          <p>Affumicate tradizionalmente</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Tour Aziendale</h3>
+          <p>Vedi il processo di filatura dal vivo</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛒</div>
+          <h3>Shop Cantina</h3>
+          <p>Acquista direttamente dal produttore</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="place-section-premium" style="animation-delay: 0.8s;">
+      <div class="section-header-premium">
+        <h2>📍 Ubicazione</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="map-premium-container">
+        <div id="place-map"></div>
+      </div>
+    </section>
+
+    <!-- Info Cards -->
+    <section class="place-section-premium" style="animation-delay: 1s;">
+      <div class="section-header-premium">
+        <h2>ℹ️ Visita il Caseificio</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="info-grid-premium">
+        <div class="info-card-premium">
+          <h4>📞 Contatti</h4>
+          <p>+39 083 219 8765<br>info@caseificiotaurasi.it</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🕐 Orari Visite</h4>
+          <p>Lun-Sab: 9-12, 15-17<br>Domenica su prenotazione</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🎒 Prezzi Tour</h4>
+          <p>€8 adulti<br>€4 bambini</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🌐 Store Online</h4>
+          <p>www.caseificiotaurasi.it<br>Spedizione in Italia</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related -->
+    <section class="place-section-premium related-section" style="animation-delay: 1.2s;">
+      <div class="section-header-premium">
+        <h2>🔗 Altra Enogastronomia</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="related-places-grid">
+        <a href="frantoio-olio-pagani.html" class="related-card">
+          <div class="related-icon">🫒</div>
+          <h3>Frantoio Pagani</h3>
+          <p>Olio biologico</p>
+        </a>
+        <a href="azienda-viticola-fiano.html" class="related-card">
+          <div class="related-icon">🍷</div>
+          <h3>Fiano di Avellino</h3>
+          <p>Vini DOCG</p>
+        </a>
+        <a href="orto-biologico-nocera.html" class="related-card">
+          <div class="related-icon">🥬</div>
+          <h3>Orto Biologico</h3>
+          <p>Farm to Table</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 2rem; text-align: center; color: var(--muted-foreground); background: var(--card); margin-top: 4rem; border-top: 1px solid var(--border);">
+    <p>© 2026 Tredizione | Ricetta Tra Tradizione e Qualità</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.9400, lng = 14.8200;
+    const map = L.map('place-map').setView([lat, lng], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('<b>Caseificio Artigianale Taurasi</b><br>🧀 Formaggi DOP').openPopup();
+  </script>
+</body>
+</html>

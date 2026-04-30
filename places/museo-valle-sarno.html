@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Museo Archeologico Nazionale della Valle del Sarno — Sarno</title>
+  <meta name="description" content="Museo Archeologico Nazionale della Valle del Sarno, Palazzo Capua, Sarno.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+ </head>
+<body>
+  <div class="place-header">
+    <div class="container">
+      <a href="../index.html" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <h1>Museo Valle del Sarno</h1>
+      <div class="breadcrumb">
+        <a href="../index.html" class="place-breadcrumb-link">Home</a>
+        <span>»</span>
+        <a href="../index.html#places" class="place-breadcrumb-link">Luoghi</a>
+        <span>»</span>
+        <span>Museo Sarno</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content" style="padding:2rem 1rem;">
+    <img src="../src/assets/Museo Archeologico Nazionale della Valle del Sarno.jpg" alt="Museo Valle del Sarno" style="width:100%;max-height:480px;object-fit:cover;border-radius:.75rem;margin:2rem 0;box-shadow:var(--shadow-warm);">
+    <div class="place-info">
+      <div class="info-item"><strong>📍 Comune</strong> Sarno</div>
+      <div class="info-item"><strong>📅 Periodo</strong> IX sec. a.C. - Medioevo</div>
+      <div class="info-item"><strong>🏛️ Tipologia</strong> Museo Archeologico</div>
+      <div class="info-item"><strong>📞 Sede</strong> Palazzo Capua</div>
+    </div>
+    <section class="place-section">
+      <h2>Descrizione Storica</h2>
+      <p>Ospitato nel settecentesco Palazzo Capua, il museo illustra l'affascinante storia della valle dal IX secolo a.C. fino al Medioevo.</p>
+      <p>Le collezioni di necropoli monumentali e insediamenti umani forniscono una comprensione profonda della civiltà della valle.</p>
+    </section>
+    <section class="place-section">
+      <h2>📸 Galleria</h2>
+      <div class="place-gallery">
+        <img src="../src/assets/Museo Archeologico Nazionale della Valle del Sarno.jpg" alt="Collezione" title="Reperti della valle">
+        <img src="../src/assets/Museo Archeologico Nazionale della Valle del Sarno.jpg" alt="Necropoli" title="Materiali della necropoli">
+        <img src="../src/assets/Museo Archeologico Nazionale della Valle del Sarno.jpg" alt="Vita quotidiana" title="Oggetti della vita quotidiana">
+        <img src="../src/assets/Museo Archeologico Nazionale della Valle del Sarno.jpg" alt="Decorazioni" title="Decorazioni antiche">
+      </div>
+    </section>
+    <section class="place-map-container">
+      <div id="place-map"></div>
+    </section>
+    <section class="place-section">
+      <h2>ℹ️ Info Pratiche</h2>
+      <p><strong>Ubicazione:</strong> Palazzo Capua, centro di Sarno.</p>
+      <p><strong>Visita consigliata:</strong> 1,5-2 ore per un'esperienza completa.</p>
+    </section>
+    <div class="place-related">
+      <h3>🔗 Siti Correlati</h3>
+      <div class="place-related-grid">
+        <a href="concattedrale-san-michele.html" class="related-link">Concattedrale</a>
+        <a href="santuario-santa-maria-dei-bagni.html" class="related-link">Santuario</a>
+        <a href="museo-archeologico-provinciale.html" class="related-link">Museo Provinciale</a>
+      </div>
+    </div>
+  </main>
+  <footer style="padding:2rem;text-align:center;color:var(--muted-foreground);">© 2026 Tredizione</footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.8120, lng = 14.6200; // approssimazione Sarno
+    const map = L.map('place-map').setView([lat, lng], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('Museo Valle del Sarno').openPopup();
+  </script>
+</body>
+</html>

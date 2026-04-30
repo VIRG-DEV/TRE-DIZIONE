@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Frantoio Biologico Pagani - Olio Extra Vergine</title>
+  <meta name="description" content="Frantoio storico con produzione di olio extra vergine biologico, coltura sostenibile delle olive, degustazioni e tour.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <!-- Hero Header -->
+  <div class="place-header-premium" data-parallax="0.5" style="background: linear-gradient(135deg, #CD7F32 0%, #FF9500 100%); position: relative; overflow: hidden;">
+    <div class="parallax-bg"></div>
+    <div class="container place-header-content">
+      <a href="../index.html#places" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <div class="header-main">
+        <div class="header-badge" style="background: rgba(255,255,255,0.2); border-left: 4px solid #CD7F32;">🫒 FRANTOIO</div>
+        <h1>Frantoio Biologico Pagani</h1>
+        <p class="header-subtitle">Olio extra vergine della Campania autentico</p>
+      </div>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>»</span>
+        <a href="../index.html#places">Luoghi</a> <span>»</span>
+        <span>Frantoio Pagani</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content-premium">
+    <!-- Quick Info Bar -->
+    <div class="quick-info-bar">
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <div><strong>Comune</strong> <br> Pagani</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="1"></circle>
+          <circle cx="19" cy="12" r="1"></circle>
+          <circle cx="5" cy="12" r="1"></circle>
+        </svg>
+        <div><strong>Biologico</strong> <br> Certificato ICEA</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6v6l4 2"></polyline>
+        </svg>
+        <div><strong>Stagione</strong> <br> Ottobre-Novembre</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 12h.01M12 12h.01M16 12h.01M9 2h6a4 4 0 014 4v12a4 4 0 01-4 4H9a4 4 0 01-4-4V6a4 4 0 014-4z"></path>
+        </svg>
+        <div><strong>Visita</strong> <br> Tutto l'anno</div>
+      </div>
+    </div>
+
+    <!-- Main Sections -->
+    <section class="place-section-premium" style="animation-delay: 0.2s;">
+      <div class="section-header-premium">
+        <h2>🌳 Gli Ulivi di Pagani</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-content">
+        <p style="font-size: 1.05rem; line-height: 1.8;">Il Frantoio Biologico Pagani coltiva ulivi con tecniche sostenibili da oltre 80 anni. Le nostre olive, raccolte a mano nei momenti di massima maturazione, vengono frantumate entro poche ore per garantire olio extra vergine di qualità eccezionale. Ogni goccia è il risultato di amore, dedizione e rispetto della natura.</p>
+        <div class="highlight-box" style="margin-top: 2rem; background: linear-gradient(135deg, #FFEAA7 0%, #FDCB6E 100%); border-left: 4px solid #CD7F32; padding: 1.5rem; border-radius: 0.75rem;">
+          <strong style="color: #CD7F32;">🍃 Metodo Biologico:</strong> Niente pesticidi, raccolta manuale ecologica, frantura a freddo, conservazione in acciaio inox. Certificato ICEA.
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="place-section-premium" style="animation-delay: 0.4s;">
+      <div class="section-header-premium">
+        <h2>🖼️ Dal Campo alla Tavola</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid-premium">
+        <div class="gallery-item" style="animation-delay: 0.1s;">
+          <img src="../src/assets/Frantoio Oleario Pagani Bio.webp" alt="Ulivi" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Oliveti Biologici</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.2s;">
+          <img src="../src/assets/agriculture-1.jpg" alt="Raccolta" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Raccolta delle Olive</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.3s;">
+          <img src="../src/assets/Fattoria_locale.png" alt="Produzione" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Processo di Estrazione</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.4s;">
+          <img src="../src/assets/landscape-1.jpg" alt="Bottiglie" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Olio Extra Vergine</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="place-section-premium" style="animation-delay: 0.6s;">
+      <div class="section-header-premium">
+        <h2>⭐ Esperienze al Frantoio</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🌳</div>
+          <h3>Tour Ulivetico</h3>
+          <p>Scopri la storia e la tradizione locale</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👃</div>
+          <h3>Degustazione Guidata</h3>
+          <p>Impara a riconoscere le qualità dell'olio</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3>Osserva la Frantura</h3>
+          <p>Vedi dal vivo il processo tradizionale</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🍽️</div>
+          <h3>Colazione Degustazione</h3>
+          <p>Olio fresco su bruschetta biologica</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="place-section-premium" style="animation-delay: 0.8s;">
+      <div class="section-header-premium">
+        <h2>📍 Vieni a Trovarci</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="map-premium-container">
+        <div id="place-map"></div>
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section class="place-section-premium" style="animation-delay: 1s;">
+      <div class="section-header-premium">
+        <h2>ℹ️ Informazioni Pratiche</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="info-grid-premium">
+        <div class="info-card-premium">
+          <h4>📞 Contatti</h4>
+          <p>+39 081 543 2109<br>info@frantioopagani.it</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🕐 Orari</h4>
+          <p>Lun-Sab: 9-18<br>Nov-Dic: 8-19 (stagione)</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>💰 Tour</h4>
+          <p>€12 visita semplice<br>€20 con degustazione</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🌐 Shop</h4>
+          <p>www.frantoiopagani.it<br>Ordini per DHL Italia</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related -->
+    <section class="place-section-premium related-section" style="animation-delay: 1.2s;">
+      <div class="section-header-premium">
+        <h2>🔗 Scopri Altre Specialità</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="related-places-grid">
+        <a href="caseificio-taurasi.html" class="related-card">
+          <div class="related-icon">🧀</div>
+          <h3>Caseificio</h3>
+          <p>Formaggi DOP</p>
+        </a>
+        <a href="azienda-viticola-fiano.html" class="related-card">
+          <div class="related-icon">🍷</div>
+          <h3>Fiano di Avellino</h3>
+          <p>Vini DOCG</p>
+        </a>
+        <a href="orto-biologico-nocera.html" class="related-card">
+          <div class="related-icon">🥬</div>
+          <h3>Orto Biologico</h3>
+          <p>Prodotti km0</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 2rem; text-align: center; color: var(--muted-foreground); background: var(--card); margin-top: 4rem; border-top: 1px solid var(--border);">
+    <p>© 2026 Tredizione | Olio Biologico, Tradizione, Eccellenza</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.7270, lng = 14.5800;
+    const map = L.map('place-map').setView([lat, lng], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('<b>Frantoio Biologico Pagani</b><br>🫒 Olio Extra Vergine').openPopup();
+  </script>
+</body>
+</html>

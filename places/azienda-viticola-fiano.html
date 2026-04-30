@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Azienda Viticola Fiano di Avellino DOCG</title>
+  <meta name="description" content="Cantina con degustazione vini bianchi d'eccellenza Fiano di Avellino DOCG. Tour in vigna e laboratori sensoriali.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <!-- Hero Header with Parallax -->
+  <div class="place-header-premium" data-parallax="0.5" style="background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); position: relative; overflow: hidden;">
+    <div class="parallax-bg"></div>
+    <div class="container place-header-content">
+      <a href="../index.html#places" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <div class="header-main">
+        <div class="header-badge" style="background: rgba(255,255,255,0.2); border-left: 4px solid #8B4513;">🍷 ENOGASTRONOMIA</div>
+        <h1>Azienda Viticola Fiano di Avellino</h1>
+        <p class="header-subtitle">Vini bianchi d'eccellenza DOCG</p>
+      </div>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>»</span>
+        <a href="../index.html#places">Luoghi</a> <span>»</span>
+        <span>Fiano di Avellino</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content-premium">
+    <!-- Quick Info Bar -->
+    <div class="quick-info-bar">
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <div><strong>Comune</strong> <br> Avellino</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 9h.01"></path><path d="M12 9h.01"></path><path d="M16 9h.01"></path><path d="M8 13h.01"></path><path d="M12 13h.01"></path><path d="M16 13h.01"></path>
+        </svg>
+        <div><strong>Varietà</strong> <br> Fiano DOCG</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6v6l4 2"></polyline>
+        </svg>
+        <div><strong>Orario</strong> <br> 10:00 - 18:00</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 11l3 3L22 4"></path>
+          <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <div><strong>Prenotazione</strong> <br> Consigliata</div>
+      </div>
+    </div>
+
+    <!-- Main Sections with Animations -->
+    <section class="place-section-premium" style="animation-delay: 0.2s;">
+      <div class="section-header-premium">
+        <h2>🍇 L'Eccellenza del Fiano</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-content">
+        <p style="font-size: 1.05rem; line-height: 1.8;">L'Azienda Viticola del Fiano di Avellino offre un'esperienza sensoriale unica con degustazioni di vini bianchi di prestigio. Ogni bottiglia racconta la storia della tradizione vinicola campana, unendo passione, dedizione e innovazione.</p>
+        <div class="highlight-box" style="margin-top: 2rem; background: linear-gradient(135deg, #fff9e6 0%, #fff0f0 100%); border-left: 4px solid #8B4513; padding: 1.5rem; border-radius: 0.75rem;">
+          <strong style="color: #8B4513;">🏆 Riconoscimento:</strong> Il Fiano è considerato uno dei migliori vini bianchi italiani, con riconoscimenti internazionali.
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Premium -->
+    <section class="place-section-premium" style="animation-delay: 0.4s;">
+      <div class="section-header-premium">
+        <h2>📸 Galleria Esperienza</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid-premium">
+        <div class="gallery-item" style="animation-delay: 0.1s;">
+          <img src="../src/assets/agriculture-1.jpg" alt="Vigneti" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Vigneti Storici</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.2s;">
+          <img src="../src/assets/landscape-1.jpg" alt="Cantina" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Tenuta Viticola</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.3s;">
+          <img src="../src/assets/Frantoio Oleario Pagani Bio.webp" alt="Produzione" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Eccellenze Locali</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.4s;">
+          <img src="../src/assets/Fattoria_locale.png" alt="Degustazione" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Degustazione</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="place-section-premium" style="animation-delay: 0.6s;">
+      <div class="section-header-premium">
+        <h2>⭐ Attività Proposte</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🍴</div>
+          <h3>Degustazione Guidata</h3>
+          <p>Con sommelier esperti per scoprire le note del Fiano</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌾</div>
+          <h3>Tour in Vigna</h3>
+          <p>Passeggiata tra i filari storici della cantina</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👨‍🍳</div>
+          <h3>Laboratorio Sensoriale</h3>
+          <p>Workshop su abbinamenti vino-cibo tradizionali</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎁</div>
+          <h3>Shop Esclusivo</h3>
+          <p>Selezione vini e prodotti tipici locali</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="place-section-premium" style="animation-delay: 0.8s;">
+      <div class="section-header-premium">
+        <h2>📍 Dove Trovarci</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="map-premium-container">
+        <div id="place-map"></div>
+      </div>
+    </section>
+
+    <!-- Practical Info -->
+    <section class="place-section-premium" style="animation-delay: 1s;">
+      <div class="section-header-premium">
+        <h2>ℹ️ Informazioni Pratiche</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="info-grid-premium">
+        <div class="info-card-premium">
+          <h4>📞 Prenotazioni</h4>
+          <p>+39 081 234 5678<br>info@fianodavellino.it</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🕒 Orari</h4>
+          <p>Lun-Dom: 10-18<br>Chiuso ferragosto</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>💰 Tariffe</h4>
+          <p>Degustazione: €15-35<br>Tour: €20</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🌐 Web</h4>
+          <p>www.fianodavellino.it<br>@fiano_avellino</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Places -->
+    <section class="place-section-premium related-section" style="animation-delay: 1.2s;">
+      <div class="section-header-premium">
+        <h2>🔗 Altre Esperienze</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="related-places-grid">
+        <a href="caseificio-taurasi.html" class="related-card">
+          <div class="related-icon">🧀</div>
+          <h3>Caseificio Taurasi</h3>
+          <p>Formaggi DOP tradizionali</p>
+        </a>
+        <a href="enoteca-regionale.html" class="related-card">
+          <div class="related-icon">🍷</div>
+          <h3>Enoteca Regionale</h3>
+          <p>Wine selection premium</p>
+        </a>
+        <a href="orto-biologico-nocera.html" class="related-card">
+          <div class="related-icon">🥬</div>
+          <h3>Orto Biologico</h3>
+          <p>Farm to table experience</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 2rem; text-align: center; color: var(--muted-foreground); background: var(--card); margin-top: 4rem; border-top: 1px solid var(--border);">
+    <p>© 2026 Tredizione | Vini, sapori e tradizioni</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.9050, lng = 14.7800;
+    const map = L.map('place-map').setView([lat, lng], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('<b>Fiano di Avellino DOCG</b><br>🍷 Cantina Storica').openPopup();
+  </script>
+</body>
+</html>

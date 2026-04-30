@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tredizione | Discover Italian Heritage</title>
+    <meta
+      name="description"
+      content="Explore the cultural richness, historical landmarks, and natural beauty of the Tredizione region in Southern Italy."
+    />
+    <meta name="author" content="Tredizione Portal" />
+    <meta
+      name="keywords"
+      content="Tredizione, Italian heritage, Campania, tourism, culture, history"
+    />
+
+    <meta
+      property="og:title"
+      content="Tredizione | Discover Italian Heritage"
+    />
+    <meta
+      property="og:description"
+      content="Explore the cultural richness, historical landmarks, and natural beauty of the Tredizione region in Southern Italy."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@agro_nocerino" />
+    <meta name="twitter:image" content="" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+      <div class="container nav-container">
+        <div class="nav-brand">
+          <svg
+            class="nav-icon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Tredizione</span>
+        </div>
+
+        <button
+          class="mobile-toggle"
+          id="mobile-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link" data-i18n="nav-home">Home</a>
+          <a href="#discover" class="nav-link" data-i18n="nav-discover"
+            >Discover</a
+          >
+          <a href="#places" class="nav-link" data-i18n="nav-places">Luoghi</a>
+          <a href="#map" class="nav-link" data-i18n="nav-map">Map</a>
+          <a href="#gallery" class="nav-link" data-i18n="nav-gallery"
+            >Gallery</a
+          >
+          <a href="#three-d" class="nav-link" data-i18n="nav-3d">3D</a>
+          <a
+            href="#three-d-visualizer"
+            class="nav-link"
+            data-i18n="nav-3d-visualizer"
+            >VIEWER</a
+          >
+          <a href="#our-photos" class="nav-link" data-i18n="nav-our-photos"
+            >FOTO</a
+          >
+        </div>
+
+        <div class="nav-actions">
+          <!-- Translation Button -->
+          <button
+            id="language-toggle"
+            class="icon-btn"
+            aria-label="Toggle language"
+          >
+            <svg
+              class="lang-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path
+                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+              ></path>
+            </svg>
+            <span id="language-toggle-text">English</span>
+          </button>
+
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+            <svg
+              class="theme-icon sun-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg
+              class="theme-icon moon-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <button id="nav-ai-btn" class="btn btn-primary nav-ai-btn">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              style="margin-right: 5px"
+            >
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+              ></path>
+            </svg>
+            <span data-i18n="nav-ai">Agro AI</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Banner -->
+    <div id="banner" class="banner">
+      <div class="container banner-content">
+        <p id="banner-message"></p>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1 data-i18n="hero-title">Tredizione</h1>
+        <p data-i18n="hero-subtitle">
+          Discover the heart of Southern Italy's cultural heritage, breathtaking
+          landscapes, and agricultural traditions
+        </p>
+        <div class="hero-actions">
+          <button
+            class="btn btn-hero"
+            onclick="
+              document
+                .getElementById('discover')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+            data-i18n="hero-explore"
+          >
+            Explore the Region
+          </button>
+          <button
+            class="btn btn-outline"
+            onclick="
+              document
+                .getElementById('map')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+            data-i18n="hero-view-map"
+          >
+            View Map
+          </button>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Places Section -->
+    <section id="places" class="places-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="section-places-title">Luoghi da Non Perdere</h2>
+          <p data-i18n="section-places-desc">
+            Scopri alcune delle bellezze dell'Agro-Nocerino-Sarnese. Clicca per
+            maggiori dettagli e per trovarle sulla mappa.
+          </p>
+        </div>
+
+        <div class="places-controls">
+          <button class="btn" data-filter="all" data-i18n="filter-all">
+            Tutti
+          </button>
+          <button class="btn" data-filter="chiese" data-i18n="filter-churches">
+            Chiese
+          </button>
+          <button
+            class="btn"
+            data-filter="monumenti"
+            data-i18n="filter-monuments"
+          >
+            Monumenti
+          </button>
+          <button class="btn" data-filter="castelli" data-i18n="filter-castles">
+            Castelli
+          </button>
+        </div>
+
+        <div id="places-grid" class="places-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- POI Cards Section -->
+    <section id="discover" class="discover-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="section-discover-title">Discover the Region</h2>
+          <p data-i18n="section-discover-desc">
+            A land where history, culture, and nature converge to create
+            unforgettable experiences
+          </p>
+        </div>
+
+        <div class="poi-grid scroll-trigger">
+          <div class="poi-card scroll-stagger">
+            <div class="poi-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <h3 data-i18n="poi-historic-title">Historic Heritage</h3>
+            <p data-i18n="poi-historic-desc">
+              Explore centuries-old churches, cathedrals, and architectural
+              marvels that tell the story of our rich past.
+            </p>
+          </div>
+
+          <div class="poi-card scroll-stagger">
+            <div class="poi-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="poi-natural-title">Natural Beauty</h3>
+            <p data-i18n="poi-natural-desc">
+              From the Sarno Valley to the Lattari Mountains, discover
+              breathtaking landscapes and pristine natural environments.
+            </p>
+          </div>
+
+          <div class="poi-card scroll-stagger">
+            <div class="poi-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"
+                ></path>
+                <path
+                  d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"
+                ></path>
+              </svg>
+            </div>
+            <h3 data-i18n="poi-agri-title">Agricultural Excellence</h3>
+            <p data-i18n="poi-agri-desc">
+              Experience farm-to-table traditions, visit working farms, and
+              taste authentic local produce.
+            </p>
+          </div>
+
+          <div class="poi-card scroll-stagger">
+            <div class="poi-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect>
+                <path d="M9 22v-4h6v4"></path>
+                <path d="M8 6h.01"></path>
+                <path d="M16 6h.01"></path>
+                <path d="M12 6h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M16 10h.01"></path>
+                <path d="M16 14h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M8 14h.01"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="poi-ruins-title">Archaeological Sites</h3>
+            <p data-i18n="poi-ruins-desc">
+              Explore ancient Nuceria Alfaterna and other historic sites that
+              bring the past to life.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid scroll-trigger">
+          <div class="stat-item">
+            <div class="stat-number" data-target="50">0</div>
+            <div class="stat-label" data-i18n="stat-historic">
+              Historic Sites
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label" data-i18n="stat-farms">Local Farms</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="25">0</div>
+            <div class="stat-label" data-i18n="stat-villages">Villages</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="2000">0</div>
+            <div class="stat-label" data-i18n="stat-years">
+              Years of History
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section id="map" class="map-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="section-map-title">Explore the Region</h2>
+          <p data-i18n="section-map-desc">
+            Navigate through historic sites, cultural landmarks, and natural
+            beauty
+          </p>
+        </div>
+        <div id="interactive-map" class="scroll-trigger"></div>
+      </div>
+    </section>
+
+    <!-- Image Carousel Section -->
+    <section id="gallery" class="carousel-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="section-gallery-title">Gallery</h2>
+          <p data-i18n="section-gallery-desc">
+            Experience the beauty of Tredizione through images
+          </p>
+        </div>
+
+        <div class="carousel-container scroll-trigger">
+          <button class="carousel-btn carousel-prev" id="carousel-prev">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="carousel-images" id="carousel-images">
+            <img
+              src="src/assets/Castello_Del_Parco_Nocera.jpg"
+              alt="Castello del Parco Fienga"
+              class="carousel-image active"
+            />
+            <img
+              src="src/assets/Cattedrale di San Prisco.jpg"
+              alt="Cattedrale di San Prisco"
+              class="carousel-image"
+            />
+            <img
+              src="src/assets/Oasi Naturale del Fiume Sarno.jpg"
+              alt="Oasi del Sarno"
+              class="carousel-image"
+            />
+            <img
+              src="src/assets/Battistero Paleocristiano di Santa Maria Maggiore.jpeg"
+              alt="Battistero Paleocristiano"
+              class="carousel-image"
+            />
+          </div>
+
+          <button class="carousel-btn carousel-next" id="carousel-next">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D Upload Section (User files) -->
+    <section id="three-d" class="section-3d">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="section-3d-title">3D Local Loader</h2>
+          <p data-i18n="section-3d-desc">
+            Carica i tuoi file .obj locali per visualizzarli nel browser.
+          </p>
+        </div>
+
+        <div class="viewer-3d-container">
+          <div id="canvas-upload-container" class="canvas-3d-wrapper">
+            <div id="loading-upload" class="loading-overlay hidden">
+              <div class="loader"></div>
+              <p>Caricamento...</p>
+            </div>
+          </div>
+
+          <div class="controls-3d">
+            <input type="file" id="obj-upload" accept=".obj" class="hidden" />
+            <button id="upload-btn" class="btn btn-primary">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+              <span data-i18n="3d-upload-btn">Carica File .obj</span>
+            </button>
+            <p class="help-text">Trascina per ruotare, rotella per zoomare</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D Visualizer Section (Our models) -->
+    <section id="three-d-visualizer" class="section-3d">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="section-visualizer-title">3D-VISUALIZER</h2>
+          <p data-i18n="section-visualizer-desc">
+            Esplora i monumenti dell'Agro ricostruiti in 3D dal nostro team.
+          </p>
+        </div>
+
+        <div class="visualizer-grid">
+          <!-- Card 1: Basilica -->
+          <div class="card-3d">
+            <div
+              class="card-3d-canvas"
+              data-model="src/assets/models/basilica_pontificia.obj"
+            >
+              <div class="model-placeholder">
+                <svg
+                  width="64"
+                  height="64"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1"
+                  style="opacity: 0.2"
+                >
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                  ></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <button
+                  class="btn btn-primary load-3d-btn"
+                  data-i18n="3d-load-btn"
+                >
+                  Visualizza 3D
+                </button>
+              </div>
+              <div class="loading-overlay hidden">
+                <div class="loader"></div>
+                <p>0%</p>
+              </div>
+            </div>
+            <div class="card-3d-info">
+              <h3 data-i18n="3d-model-basilica">Basilica Pontificia</h3>
+              <p data-i18n="3d-model-basilica-desc">
+                Modello dettagliato della Basilica Pontificia.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Chiesa Barocca -->
+          <div class="card-3d">
+            <div
+              class="card-3d-canvas"
+              data-model="src/assets/models/chiesa_barocca.obj"
+            >
+              <div class="model-placeholder">
+                <svg
+                  width="64"
+                  height="64"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1"
+                  style="opacity: 0.2"
+                >
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                  ></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <button
+                  class="btn btn-primary load-3d-btn"
+                  data-i18n="3d-load-btn"
+                >
+                  Visualizza 3D
+                </button>
+              </div>
+              <div class="loading-overlay hidden">
+                <div class="loader"></div>
+                <p>0%</p>
+              </div>
+            </div>
+            <div class="card-3d-info">
+              <h3 data-i18n="3d-model-chiesa">Chiesa Barocca</h3>
+              <p data-i18n="3d-model-chiesa-desc">
+                Ricostruzione 3D di una chiesa in stile barocco coloniale.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Santuario -->
+          <div class="card-3d">
+            <div
+              class="card-3d-canvas"
+              data-model="src/assets/models/santuario.obj"
+            >
+              <div class="model-placeholder">
+                <svg
+                  width="64"
+                  height="64"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1"
+                  style="opacity: 0.2"
+                >
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                  ></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <button
+                  class="btn btn-primary load-3d-btn"
+                  data-i18n="3d-load-btn"
+                >
+                  Visualizza 3D
+                </button>
+              </div>
+              <div class="loading-overlay hidden">
+                <div class="loader"></div>
+                <p>0%</p>
+              </div>
+            </div>
+            <div class="card-3d-info">
+              <h3 data-i18n="3d-model-santuario">Santuario</h3>
+              <p data-i18n="3d-model-santuario-desc">
+                Visualizzazione 3D del Serene Sanctuary.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Photos Section -->
+    <section
+      id="our-photos"
+      class="section-3d"
+      style="background-color: var(--card)"
+    >
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="section-photos-title">FOTO D'AUTORE</h2>
+          <p data-i18n="section-photos-desc">
+            Una collezione di scatti esclusivi realizzati dal nostro team sul
+            territorio.
+          </p>
+        </div>
+
+        <div class="photo-gallery-grid">
+          <div class="photo-item">
+            <img
+              src="src/assets/Basilica di Sant'Alfonso Maria de' Liguori.jpg"
+              alt="Basilica Sant'Alfonso"
+              loading="lazy"
+            />
+            <div class="photo-caption">Basilica di Sant'Alfonso</div>
+          </div>
+          <div class="photo-item">
+            <img
+              src="src/assets/Castello_Del_Parco_Nocera.jpg"
+              alt="Castello del Parco"
+              loading="lazy"
+            />
+            <div class="photo-caption">Castello del Parco</div>
+          </div>
+          <div class="photo-item">
+            <img
+              src="src/assets/Cattedrale di San Prisco.jpg"
+              alt="Cattedrale San Prisco"
+              loading="lazy"
+            />
+            <div class="photo-caption">Cattedrale di San Prisco</div>
+          </div>
+          <div class="photo-item">
+            <img
+              src="src/assets/Oasi Naturale del Fiume Sarno.jpg"
+              alt="Oasi Fiume Sarno"
+              loading="lazy"
+            />
+            <div class="photo-caption">Oasi del Sarno</div>
+          </div>
+
+          <div class="photo-item">
+            <img
+              src="src/assets/Frantoio Oleario Pagani Bio.webp"
+              alt="Frantoio Oleario"
+              loading="lazy"
+            />
+            <div class="photo-caption">Frantoio Oleario</div>
+          </div>
+          <div class="photo-item">
+            <img
+              src="src/assets/Caseificio Artigianale Taurasi.jpeg"
+              alt="Caseificio Taurasi"
+              loading="lazy"
+            />
+            <div class="photo-caption">Caseificio Taurasi</div>
+          </div>
+          <div class="photo-item">
+            <img
+              src="src/assets/Bosco del Ninfeo & Laghi.jpg"
+              alt="Bosco del Ninfeo"
+              loading="lazy"
+            />
+            <div class="photo-caption">Bosco del Ninfeo</div>
+          </div>
+          <div class="photo-item">
+            <img
+              src="src/assets/landscape-1.jpg"
+              alt="Paesaggio Agro"
+              loading="lazy"
+            />
+            <div class="photo-caption">Paesaggi dell'Agro</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <h3>Tredizione</h3>
+            </div>
+            <p data-i18n="footer-about">
+              Celebrating the cultural heritage and natural beauty of Southern
+              Italy's most authentic region.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4 data-i18n="footer-links">Quick Links</h4>
+            <ul>
+              <li><a href="#home" data-i18n="nav-home">Home</a></li>
+              <li><a href="#discover" data-i18n="nav-discover">Discover</a></li>
+              <li><a href="#map" data-i18n="nav-map">Map</a></li>
+              <li><a href="#gallery" data-i18n="nav-gallery">Gallery</a></li>
+              <li><a href="#three-d" data-i18n="nav-3d">3D</a></li>
+              <li><a href="#AI" data-i18n="nav-ai">AI</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 data-i18n="footer-contact">Contact</h4>
+            <ul class="contact-list">
+              <li>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span>info@agro-ns.it</span>
+              </li>
+              <li>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+                <span>+39 081 123 4567</span>
+              </li>
+              <li>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Nocera Inferiore, SA</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 data-i18n="footer-follow">Follow Us</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p data-i18n="footer-rights">
+            © 2026 Tredizione. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Three.js (Non-module version for file:// support) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="3d-viewer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cattedrale di San Prisco — Nocera Inferiore</title>
+  <meta name="description" content="Cattedrale di San Prisco, complesso monumentale nella diocesi di Nocera Inferiore.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+ </head>
+<body>
+  <div class="place-header">
+    <div class="container">
+      <a href="../index.html" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <h1>Cattedrale di San Prisco</h1>
+      <div class="breadcrumb">
+        <a href="../index.html" class="place-breadcrumb-link">Home</a>
+        <span>»</span>
+        <a href="../index.html#places" class="place-breadcrumb-link">Luoghi</a>
+        <span>»</span>
+        <span>Cattedrale</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content" style="padding:2rem 1rem;">
+    <img src="../src/assets/Cattedrale di San Prisco.jpg" alt="Cattedrale San Prisco" style="width:100%;max-height:480px;object-fit:cover;border-radius:.75rem;margin:2rem 0;box-shadow:var(--shadow-warm);">
+    <div class="place-info">
+      <div class="info-item"><strong>📍 Comune</strong> Nocera Inferiore</div>
+      <div class="info-item"><strong>📅 Epoca</strong> Medioevo e rinascimento</div>
+      <div class="info-item"><strong>🏛️ Tipologia</strong> Chiesa Cattedrale</div>
+      <div class="info-item"><strong>📞 Indirizzo</strong> Via Vescovado</div>
+    </div>
+    <section class="place-section">
+      <h2>Descrizione Storica</h2>
+      <p>La cattedrale dedicata a San Prisco è il cuore spirituale della diocesi locale. Presenta una ricca decorazione interna e rappresenta secoli di devozione artistica e religiosa.</p>
+      <p>L'edificio mantiene tracce di vari periodi storici, rappresentando l'évoluzione architettonica della regione.</p>
+    </section>
+    <section class="place-section">
+      <h2>📸 Galleria</h2>
+      <div class="place-gallery">
+        <img src="../src/assets/Cattedrale di San Prisco.jpg" alt="Facciata" title="Facciata della cattedrale">
+        <img src="../src/assets/Battistero Paleocristiano di Santa Maria Maggiore.jpeg" alt="Interno" title="Interno decorato">
+        <img src="../src/assets/Piazza del Corso-Nocera_Inferiore.jpg" alt="Alta" title="Dettagli dell'altare">
+        <img src="../src/assets/Museo Archeologico Provinciale dell'Agro Nocerino.jpg" alt="Coro" title="Sezione del coro">
+      </div>
+    </section>
+    <section class="place-map-container">
+      <div id="place-map"></div>
+    </section>
+    <section class="place-section">
+      <h2>ℹ️ Info Pratiche</h2>
+      <p><strong>Apertura:</strong> Orari di visita disponibili presso la curia.</p>
+      <p><strong>Funzioni:</strong> Luogo di culto attivo con funzioni religiose regolari.</p>
+    </section>
+    <div class="place-related">
+      <h3>🔗 Siti Correlati</h3>
+      <div class="place-related-grid">
+        <a href="battistero-santa-maria-maggiore.html" class="related-link">Battistero</a>
+        <a href="museo-archeologico-provinciale.html" class="related-link">Museo</a>
+        <a href="piazza-del-corso.html" class="related-link">Piazza Corso</a>
+      </div>
+    </div>
+  </main>
+  <footer style="padding:2rem;text-align:center;color:var(--muted-foreground);">© 2026 Tredizione</footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.7470, lng = 14.6170; // approssimazione
+    const map = L.map('place-map').setView([lat, lng], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('Cattedrale di San Prisco').openPopup();
+  </script>
+</body>
+</html>

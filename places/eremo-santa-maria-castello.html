@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Eremo di Santa Maria a Castello — Castel San Giorgio</title>
+  <meta name="description" content="Eremo di Santa Maria a Castello, luogo panoramico e spirituale a Castel San Giorgio.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+ </head>
+<body>
+  <div class="place-header">
+    <div class="container">
+      <a href="../index.html" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <h1>Eremo di Santa Maria a Castello</h1>
+      <div class="breadcrumb">
+        <a href="../index.html" class="place-breadcrumb-link">Home</a>
+        <span>»</span>
+        <a href="../index.html#places" class="place-breadcrumb-link">Luoghi</a>
+        <span>»</span>
+        <span>Eremo</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content" style="padding:2rem 1rem;">
+    <img src="../src/assets/Eremo_di_Santa_Maria_a_Castello.jpg" alt="Eremo Santa Maria a Castello" style="width:100%;max-height:480px;object-fit:cover;border-radius:.75rem;margin:2rem 0;box-shadow:var(--shadow-warm);">
+    <div class="place-info">
+      <div class="info-item"><strong>📍 Comune</strong> Castel San Giorgio</div>
+      <div class="info-item"><strong>📅 Epoca</strong> Medioevale</div>
+      <div class="info-item"><strong>🏛️ Tipologia</strong> Eremo / Monumento</div>
+      <div class="info-item"><strong>⭐ Carattere</strong> Panoramico</div>
+    </div>
+    <section class="place-section">
+      <h2>Descrizione Storica</h2>
+      <p>Eremo situato in posizione panoramica, offre un legame tra natura e spiritualità medievale, con viste spettacolari sulla valle.</p>
+      <p>Questo luogo rappresenta la fusione perfetta tra il patrimonio religioso e la bellezza naturale, caratterizzato da una serenità contemplativa unica.</p>
+    </section>
+    <section class="place-section">
+      <h2>📸 Galleria</h2>
+      <div class="place-gallery">
+        <img src="../src/assets/Eremo_di_Santa_Maria_a_Castello.jpg" alt="Panorama dalla cima" title="Vista panoramica della valle">
+        <img src="../src/assets/Eremo_di_Santa_Maria_a_Castello.jpg" alt="Struttura dell'eremo" title="Complesso eremitico">
+        <img src="../src/assets/Eremo_di_Santa_Maria_a_Castello.jpg" alt="Interno" title="Interno dell'eremo">
+        <img src="../src/assets/Eremo_di_Santa_Maria_a_Castello.jpg" alt="Natura circostante" title="Vegetazione e natura">
+      </div>
+    </section>
+    <section class="place-map-container">
+      <div id="place-map"></div>
+    </section>
+    <section class="place-section">
+      <h2>ℹ️ Info Pratiche</h2>
+      <p><strong>Ubicazione:</strong> Posizione elevata a Castel San Giorgio con accesso panoramico.</p>
+      <p><strong>Caratteristiche:</strong> Luogo di contemplazione, natura incontaminata, spiritualità medievale.</p>
+    </section>
+    <div class="place-related">
+      <h3>🔗 Siti Correlati</h3>
+      <div class="place-related-grid">
+        <a href="castello-parco-fienga.html" class="related-link">Castello Fienga</a>
+        <a href="museo-valle-sarno.html" class="related-link">Museo Valle</a>
+        <a href="cattedrale-san-prisco.html" class="related-link">Cattedrale</a>
+      </div>
+    </div>
+  </main>
+  <footer style="padding:2rem;text-align:center;color:var(--muted-foreground);">© 2026 Tredizione</footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.7720, lng = 14.5560; // approssimazione Castel San Giorgio
+    const map = L.map('place-map').setView([lat, lng], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('Eremo di Santa Maria a Castello').openPopup();
+  </script>
+</body>
+</html>

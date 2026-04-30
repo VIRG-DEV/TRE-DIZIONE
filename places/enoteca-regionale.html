@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Enoteca Regionale & Wine Bar — Nocera Inferiore</title>
+  <meta name="description" content="Selezione vini DOC e DOP, piatti gourmet abbinati. Degustazioni guidate e vendita prodotti tipici.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <!-- Hero Header with Parallax -->
+  <div class="place-header-premium" data-parallax="0.5" style="background: linear-gradient(135deg, #4A0E0E 0%, #800000 100%); position: relative; overflow: hidden;">
+    <div class="parallax-bg"></div>
+    <div class="container place-header-content">
+      <a href="../index.html#places" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <div class="header-main">
+        <div class="header-badge" style="background: rgba(255,255,255,0.2); border-left: 4px solid #800000;">🍷 ENOGASTRONOMIA</div>
+        <h1>Enoteca Regionale</h1>
+        <p class="header-subtitle">Il meglio dei vini campani in un unico luogo</p>
+      </div>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>»</span>
+        <a href="../index.html#places">Luoghi</a> <span>»</span>
+        <span>Enoteca Regionale</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content-premium">
+    <!-- Quick Info Bar -->
+    <div class="quick-info-bar">
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <div><strong>Comune</strong> <br> Nocera Inferiore</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2v20M2 12h20"></path>
+        </svg>
+        <div><strong>Selezione</strong> <br> 500+ Etichette</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6v6l4 2"></polyline>
+        </svg>
+        <div><strong>Orario</strong> <br> 17:00 - 00:00</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 11l3 3L22 4"></path>
+          <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <div><strong>Degustazione</strong> <br> Su richiesta</div>
+      </div>
+    </div>
+
+    <!-- Main Sections with Animations -->
+    <section class="place-section-premium" style="animation-delay: 0.2s;">
+      <div class="section-header-premium">
+        <h2>🍷 Cultura del Vino</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-content">
+        <p style="font-size: 1.05rem; line-height: 1.8;">L'Enoteca Regionale è il punto di riferimento per gli amanti del buon vino in Tredizione. Situata nel cuore di Nocera Inferiore, offre una selezione curata delle migliori etichette DOC e DOP della Campania, accompagnate da taglieri di prodotti locali e piatti gourmet.</p>
+        <div class="highlight-box" style="margin-top: 2rem; background: linear-gradient(135deg, #fff5f5 0%, #ffe3e3 100%); border-left: 4px solid #800000; padding: 1.5rem; border-radius: 0.75rem;">
+          <strong style="color: #800000;">🥂 Wine Experience:</strong> Organizziamo serate a tema e incontri con i produttori per diffondere la cultura enologica del territorio.
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Premium -->
+    <section class="place-section-premium" style="animation-delay: 0.4s;">
+      <div class="section-header-premium">
+        <h2>📸 Atmosfera e Sapori</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid-premium">
+        <div class="gallery-item" style="animation-delay: 0.1s;">
+          <img src="../src/assets/Azienda Viticola Fiano DOCG.jpg" alt="Enoteca" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>I Nostri Scaffali</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.2s;">
+          <img src="../src/assets/agriculture-1.jpg" alt="Vino" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Calici e Degustazione</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.3s;">
+          <img src="../src/assets/Fattoria_locale.png" alt="Tagliere" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Prodotti Tipici</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.4s;">
+          <img src="../src/assets/Frantoio Oleario Pagani Bio.webp" alt="Locale" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Atmosfera Gourmet</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="place-section-premium" style="animation-delay: 0.6s;">
+      <div class="section-header-premium">
+        <h2>⭐ Cosa Offriamo</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🍷</div>
+          <h3>Degustazioni</h3>
+          <p>Percorsi guidati tra i vitigni autoctoni</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🍴</div>
+          <h3>Taglieri</h3>
+          <p>Selezione di salumi e formaggi DOP</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛍️</div>
+          <h3>E-Shop</h3>
+          <p>Vendita diretta e spedizioni</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Eventi</h3>
+          <p>Masterclass e presentazioni libri</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="place-section-premium" style="animation-delay: 0.8s;">
+      <div class="section-header-premium">
+        <h2>📍 Dove Trovarci</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="map-premium-container">
+        <div id="place-map"></div>
+      </div>
+    </section>
+
+    <!-- Practical Info -->
+    <section class="place-section-premium" style="animation-delay: 1s;">
+      <div class="section-header-premium">
+        <h2>ℹ️ Informazioni Pratiche</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="info-grid-premium">
+        <div class="info-card-premium">
+          <h4>📞 Contatti</h4>
+          <p>+39 081 123 4567<br>info@enotecaregionale.it</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🕒 Orari</h4>
+          <p>Mar-Dom: 17:00 - 00:00<br>Lunedì chiuso</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>📍 Indirizzo</h4>
+          <p>Via Roma, Nocera Inferiore<br>Centro Storico</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🌐 Social</h4>
+          <p>Facebook / Instagram<br>@enotecaregionale</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Places -->
+    <section class="place-section-premium related-section" style="animation-delay: 1.2s;">
+      <div class="section-header-premium">
+        <h2>🔗 Altre Esperienze</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="related-places-grid">
+        <a href="azienda-viticola-fiano.html" class="related-card">
+          <div class="related-icon">🍇</div>
+          <h3>Viticola Fiano</h3>
+          <p>Tour in vigna DOCG</p>
+        </a>
+        <a href="laboratorio-pasta-sarno.html" class="related-card">
+          <div class="related-icon">🍝</div>
+          <h3>Pasta Sarno</h3>
+          <p>Artigianato alimentare</p>
+        </a>
+        <a href="frantoio-olio-pagani.html" class="related-card">
+          <div class="related-icon">🫒</div>
+          <h3>Frantoio Pagani</h3>
+          <p>Olio EVO biologico</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 2rem; text-align: center; color: var(--muted-foreground); background: var(--card); margin-top: 4rem; border-top: 1px solid var(--border);">
+    <p>© 2026 Tredizione | Vini, sapori e tradizioni</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.7480, lng = 14.6180;
+    const map = L.map('place-map').setView([lat, lng], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('<b>Enoteca Regionale</b><br>🍷 Wine Bar & Shop').openPopup();
+  </script>
+</body>
+</html>

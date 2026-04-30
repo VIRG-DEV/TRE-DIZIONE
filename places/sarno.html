@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sarno — Tredizione</title>
+  <meta name="description" content="Sarno - centro agricolo e storico">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+ </head>
+<body>
+  <div class="place-header">
+    <div class="container">
+      <a href="../index.html" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <h1>Sarno</h1>
+      <div class="breadcrumb">
+        <a href="../index.html" class="place-breadcrumb-link">Home</a>
+        <span>»</span>
+        <a href="../index.html#places" class="place-breadcrumb-link">Luoghi</a>
+        <span>»</span>
+        <span>Sarno</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content" style="padding:2rem 1rem;">
+    <img src="../src/assets/Sarno.jpg" alt="Sarno" style="width:100%;max-height:480px;object-fit:cover;border-radius:.75rem;margin:2rem 0;box-shadow:var(--shadow-warm);">
+    <div class="place-info">
+      <div class="info-item"><strong>📍 Comune</strong> Sarno</div>
+      <div class="info-item"><strong>🌿 Tipologia</strong> Centro Storico e Valle</div>
+      <div class="info-item"><strong>🚜 Attività</strong> Agricoltura e Turismo</div>
+      <div class="info-item"><strong>⭐ Carattere</strong> Panoramico / Naturale</div>
+    </div>
+    <section class="place-section">
+      <h2>Descrizione</h2>
+      <p>Sarno è noto per la sua valle e le attività agricole; offre scorci naturali e borghi caratteristici.</p>
+      <p>Città d'acqua e di storia, Sarno incanta con le sue sorgenti e il patrimonio archeologico della valle.</p>
+    </section>
+    <section class="place-section">
+      <h2>📸 Galleria</h2>
+      <div class="place-gallery">
+        <img src="../src/assets/Sarno.jpg" alt="Valle" title="Vista sulla valle">
+        <img src="../src/assets/Oasi Naturale del Fiume Sarno.jpg" alt="Sorgenti" title="Le sorgenti del Sarno">
+        <img src="../src/assets/Sarno.jpg" alt="Borgo" title="Borghi di Sarno">
+      </div>
+    </section>
+
+    <section style="margin-top:1.5rem;">
+      <h2>Mappa</h2>
+      <div id="place-map" style="height:360px;border-radius:.5rem;overflow:hidden;box-shadow:var(--shadow-soft);"></div>
+    </section>
+  </main>
+
+  <footer style="padding:2rem;text-align:center;color:var(--muted-foreground);">© Tredizione</footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.811, lng = 14.623;
+    const map = L.map('place-map').setView([lat, lng], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('Sarno').openPopup();
+  </script>
+</body>
+</html>

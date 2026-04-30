@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Orto Biologico Agri-Social Nocera</title>
+  <meta name="description" content="Fattoria biologica con raccolta a mano, ristorazione km0, laboratori di cucina e prodotti a filiera corta.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <!-- Hero Header with Parallax -->
+  <div class="place-header-premium" data-parallax="0.5" style="background: linear-gradient(135deg, #558B2F 0%, #9CCC65 100%); position: relative; overflow: hidden;">
+    <div class="parallax-bg"></div>
+    <div class="container place-header-content">
+      <a href="../index.html#places" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <div class="header-main">
+        <div class="header-badge" style="background: rgba(255,255,255,0.2); border-left: 4px solid #558B2F;">🥬 AGRITURISMO</div>
+        <h1>Orto Biologico Agri-Social</h1>
+        <p class="header-subtitle">Farm to table autentico e sostenibile</p>
+      </div>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>»</span>
+        <a href="../index.html#places">Luoghi</a> <span>»</span>
+        <span>Orto Biologico</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content-premium">
+    <!-- Quick Info Bar -->
+    <div class="quick-info-bar">
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <div><strong>Comune</strong> <br> Nocera Inferiore</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        </svg>
+        <div><strong>Superficie</strong> <br> 15 ettari bio</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6v6l4 2"></polyline>
+        </svg>
+        <div><strong>Orario</strong> <br> 9:00 - 18:00</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 3c2.132 0 4 1.766 4 4v1h2v2h-1.05A4.98 4.98 0 0018 10c1.657 0 3-1.343 3-3h2v4h-2c0 1.657-1.343 3-3 3a4.98 4.98 0 01-3.05.971V18h1.05c0 2.234-1.868 4-4 4s-4-1.766-4-4V9c0-2.234 1.868-4 4-4z"></path>
+        </svg>
+        <div><strong>Ristorante</strong> <br> Aperto tutto anno</div>
+      </div>
+    </div>
+
+    <!-- Main Sections with Animations -->
+    <section class="place-section-premium" style="animation-delay: 0.2s;">
+      <div class="section-header-premium">
+        <h2>🌱 Dalla Terra alla Tavola</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-content">
+        <p style="font-size: 1.05rem; line-height: 1.8;">L'Orto Biologico Agri-Social è un'esperienza autentica di agricoltura sostenibile. Con 15 ettari di terreni biologici certificati, offriamo la possibilità di scoprire come nasce il cibo che portiamo in tavola. Ogni verdura, ogni frutto è colto con amore e servito fresco nel nostro ristorante a km0.</p>
+        <div class="highlight-box" style="margin-top: 2rem; background: linear-gradient(135deg, #F1F8E9 0%, #DCEDC8 100%); border-left: 4px solid #558B2F; padding: 1.5rem; border-radius: 0.75rem;">
+          <strong style="color: #558B2F;">♻️ Sostenibilità:</strong> Pratiche agroecologiche, zero pesticidi, compostaggio naturale e marchio biologico certificato ICEA.
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Premium -->
+    <section class="place-section-premium" style="animation-delay: 0.4s;">
+      <div class="section-header-premium">
+        <h2>📍 Le Nostre Colture</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid-premium">
+        <div class="gallery-item" style="animation-delay: 0.1s;">
+          <img src="../src/assets/agriculture-1.jpg" alt="Campi verdi" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Colture Biologiche</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.2s;">
+          <img src="../src/assets/Fattoria_locale.png" alt="Raccolta" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Raccolto del Giorno</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.3s;">
+          <img src="../src/assets/landscape-1.jpg" alt="Ristorante" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>La Nostra Tenuta</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.4s;">
+          <img src="../src/assets/Frantoio Oleario Pagani Bio.webp" alt="Prodotti" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Prodotti Genuini</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="place-section-premium" style="animation-delay: 0.6s;">
+      <div class="section-header-premium">
+        <h2>🌿 Esperienze Agricole</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🥬</div>
+          <h3>Raccolta Ortaggi</h3>
+          <p>Scopri il ciclo dall'orto al piatto</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👨‍🍳</div>
+          <h3>Cooking Class Bio</h3>
+          <p>Lezioni con chef esperti di cucina sostenibile</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌾</div>
+          <h3>Tour Guidati</h3>
+          <p>Scopri le pratiche agroecologiche</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🍽️</div>
+          <h3>Cena a Tema</h3>
+          <p>Menu stagionale con vini naturali</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="place-section-premium" style="animation-delay: 0.8s;">
+      <div class="section-header-premium">
+        <h2>📍 Dove Siamo</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="map-premium-container">
+        <div id="place-map"></div>
+      </div>
+    </section>
+
+    <!-- Practical Info -->
+    <section class="place-section-premium" style="animation-delay: 1s;">
+      <div class="section-header-premium">
+        <h2>ℹ️ Visitaci</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="info-grid-premium">
+        <div class="info-card-premium">
+          <h4>📞 Prenotazioni</h4>
+          <p>+39 081 765 4321<br>info@ortobiologico.it</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🕐 Orari</h4>
+          <p>Lun-Ven: 14-18 (orto)<br>Rit: 12-14, 19-22</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>💰 Menu</h4>
+          <p>€25-45 persone<br>Cena di gruppo</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🌐 Seguici</h4>
+          <p>@ortobio_nocera<br>www.ortobiologico.it</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Places -->
+    <section class="place-section-premium related-section" style="animation-delay: 1.2s;">
+      <div class="section-header-premium">
+        <h2>🔗 Altre Esperienze Gastronomiche</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="related-places-grid">
+        <a href="frantoio-olio-pagani.html" class="related-card">
+          <div class="related-icon">🫒</div>
+          <h3>Frantoio Pagani</h3>
+          <p>Olio biologico dell'Agro</p>
+        </a>
+        <a href="laboratorio-pasta-sarno.html" class="related-card">
+          <div class="related-icon">🍝</div>
+          <h3>Laboratorio Pasta</h3>
+          <p>Pasta fresca artigianale</p>
+        </a>
+        <a href="azienda-viticola-fiano.html" class="related-card">
+          <div class="related-icon">🍷</div>
+          <h3>Fiano di Avellino</h3>
+          <p>Vini bianchi DOCG</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 2rem; text-align: center; color: var(--muted-foreground); background: var(--card); margin-top: 4rem; border-top: 1px solid var(--border);">
+    <p>© 2026 Tredizione | Cibo biologico, tradizione, sostenibilità</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.7450, lng = 14.6150;
+    const map = L.map('place-map').setView([lat, lng], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('<b>Orto Biologico Agri-Social</b><br>🥬 Farm to Table').openPopup();
+  </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Valle del Sarno - Sentieri e Natura</title>
+  <meta name="description" content="Valle fluviale con sentieri escursionistici, flora endemica, aree di sosta panoramiche e oasi naturali.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <!-- Hero Header -->
+  <div class="place-header-premium" data-parallax="0.5" style="background: linear-gradient(135deg, #2E7D32 0%, #43A047 100%); position: relative; overflow: hidden;">
+    <div class="parallax-bg"></div>
+    <div class="container place-header-content">
+      <a href="../index.html#places" class="place-back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg> Torna a Luoghi
+      </a>
+      <div class="header-main">
+        <div class="header-badge" style="background: rgba(255,255,255,0.2); border-left: 4px solid #2E7D32;">🥾 NATURA</div>
+        <h1>Valle del Sarno</h1>
+        <p class="header-subtitle">Sentieri tra fiumi, flora e tradizione</p>
+      </div>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> <span>»</span>
+        <a href="../index.html#places">Luoghi</a> <span>»</span>
+        <span>Valle del Sarno</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container place-content-premium">
+    <!-- Quick Info Bar -->
+    <div class="quick-info-bar">
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <div><strong>Comune</strong> <br> Sarno</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="2" x2="12" y2="22"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+        <div><strong>Lunghezza</strong> <br> 12 km sentiero</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6v6l4 2"></polyline>
+        </svg>
+        <div><strong>Durata</strong> <br> 3-4 ore</div>
+      </div>
+      <div class="quick-info-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18z"></path>
+          <path d="M9 11h6v2H9z"></path>
+          <path d="M12 7v4"></path>
+        </svg>
+        <div><strong>Difficoltà</strong> <br> Facile-Media</div>
+      </div>
+    </div>
+
+    <!-- Main Sections -->
+    <section class="place-section-premium" style="animation-delay: 0.2s;">
+      <div class="section-header-premium">
+        <h2>🌿 La Valle dei Sentieri</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="section-content">
+        <p style="font-size: 1.05rem; line-height: 1.8;">La Valle del Sarno è un percorso naturalistico che segue il corso del fiume Sarno attraverso territori di grande fascino. Affacciato su ambienti fluviali con caotici ecosistemi, il sentiero offre punti panoramici, aree di sosta attrezzate e la possibilità di osservare la flora locale endemica. Perfetto per famiglie e amanti della natura.</p>
+        <div class="highlight-box" style="margin-top: 2rem; background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%); border-left: 4px solid #2E7D32; padding: 1.5rem; border-radius: 0.75rem;">
+          <strong style="color: #2E7D32;">🌊 Ambiente Fluviale:</strong> Fiume Sarno, salici piangenti, flora riparia, fauna acquatica. Accesso facile per tutte le abilità. Sorgenti d'acqua lungo il percorso.
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="place-section-premium" style="animation-delay: 0.4s;">
+      <div class="section-header-premium">
+        <h2>🖼️ Paesaggi della Valle</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid-premium">
+        <div class="gallery-item" style="animation-delay: 0.1s;">
+          <img src="../src/assets/Valle del Sarno - Sentieri Fluviali.jpg" alt="Sentiero" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Sentieri Naturali</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.2s;">
+          <img src="../src/assets/Sarno.jpg" alt="Fiume" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Il Fiume Sarno</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.3s;">
+          <img src="../src/assets/Oasi Naturale del Fiume Sarno.jpg" alt="Ponte" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Scorci Fluviali</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="animation-delay: 0.4s;">
+          <img src="../src/assets/landscape-1.jpg" alt="Flora" class="gallery-img-premium">
+          <div class="gallery-overlay">
+            <p>Flora Endemica</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="place-section-premium" style="animation-delay: 0.6s;">
+      <div class="section-header-premium">
+        <h2>⭐ Attività in Valle</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🚶</div>
+          <h3>Trekking Facile</h3>
+          <p>Percorso a piedi interamente segnalato</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📸</div>
+          <h3>Fotografia Natura</h3>
+          <p>Punti panoramici per scatti suggestivi</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚴</div>
+          <h3>Percorsi Cicloturistici</h3>
+          <p>Bike trail su superfici miste</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🦆</div>
+          <h3>Birdwatching</h3>
+          <p>Osserva aironi, anatre selvatiche</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="place-section-premium" style="animation-delay: 0.8s;">
+      <div class="section-header-premium">
+        <h2>📍 Localizzazione</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="map-premium-container">
+        <div id="place-map"></div>
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section class="place-section-premium" style="animation-delay: 1s;">
+      <div class="section-header-premium">
+        <h2>ℹ️ Informazioni Utili</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="info-grid-premium">
+        <div class="info-card-premium">
+          <h4>📞 Contatti</h4>
+          <p>Centro Visite: +39 081 912 3456<br>comune.sarno@pec.it</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>🕐 Accesso</h4>
+          <p>Libero tutto l'anno<br>Consigliato: mag-ott</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>📍 Parcheggio</h4>
+          <p>Gratuito presso il centro<br>50 posti auto</p>
+        </div>
+        <div class="info-card-premium">
+          <h4>⚠️ Consigli</h4>
+          <p>Scarpe trekking, acqua<br>Evitare periodi pioggia</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related -->
+    <section class="place-section-premium related-section" style="animation-delay: 1.2s;">
+      <div class="section-header-premium">
+        <h2>🔗 Altre Aree Naturali</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="related-places-grid">
+        <a href="castello-parco-fienga.html" class="related-card">
+          <div class="related-icon">🏰</div>
+          <h3>Castello del Parco</h3>
+          <p>Fortezza medievale</p>
+        </a>
+        <a href="parco-monti-picentini.html" class="related-card">
+          <div class="related-icon">⛰️</div>
+          <h3>Monti Picentini</h3>
+          <p>Montagna 1790m</p>
+        </a>
+        <a href="oasi-fiume-sarno.html" class="related-card">
+          <div class="related-icon">🦆</div>
+          <h3>Oasi Fiume Sarno</h3>
+          <p>Riserva protetta</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 2rem; text-align: center; color: var(--muted-foreground); background: var(--card); margin-top: 4rem; border-top: 1px solid var(--border);">
+    <p>© 2026 Tredizione | Natura, Sentieri, Benessere</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const lat = 40.8150, lng = 14.5900;
+    const map = L.map('place-map').setView([lat, lng], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    L.marker([lat, lng]).addTo(map).bindPopup('<b>Valle del Sarno</b><br>🥾 Sentieri Naturali').openPopup();
+  </script>
+</body>
+</html>
